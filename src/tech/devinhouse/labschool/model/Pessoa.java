@@ -9,4 +9,23 @@ public abstract class Pessoa {
     Long cpf;            //alterar tipo depois
     Long codigo;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public Long getTelefone() {
+        return telefone;
+    }
+
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public Long getCpf() {
+        return cpf;
+    }
+
+    public Long getCodigo() {
+        return codigo;
+    }
 }

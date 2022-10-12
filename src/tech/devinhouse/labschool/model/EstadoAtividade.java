@@ -1,6 +1,6 @@
 package tech.devinhouse.labschool.model;
 
 public enum EstadoAtividade {
-    ESTADO,
+    ATIVO,
     INATIVO;
 }
