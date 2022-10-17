@@ -13,7 +13,7 @@ public class Pedagogo extends Pessoa{
     public Pedagogo(String nome, Long cpf, LocalDate dataDeNascimento, Long telefone) {
         this.nome = nome;
         this.cpf = cpf;
-        //this.codigo = codigo;
+        this.codigo = cpf;
         this.telefone = telefone;
         this.dataDeNascimento = dataDeNascimento;
 

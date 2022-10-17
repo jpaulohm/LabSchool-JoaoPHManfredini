@@ -11,7 +11,7 @@ public class Professor extends Pessoa{
     public Professor(String nome, Long cpf, LocalDate dataDeNascimento, Long telefone, FormacaoAcademica formacao, ExperienciaDesenvolvimento experiencia, EstadoAtividade estado) {
         this.nome = nome;
         this.cpf = cpf;
-        //this.codigo = codigo;
+        this.codigo = cpf;
         this.telefone = telefone;
         this.dataDeNascimento = dataDeNascimento;
 

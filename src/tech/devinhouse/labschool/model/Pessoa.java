@@ -28,4 +28,13 @@ public abstract class Pessoa {
     public Long getCodigo() {
         return codigo;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", cpf=" + cpf +
+                ", codigo=" + codigo +
+                '}';
+    }
 }

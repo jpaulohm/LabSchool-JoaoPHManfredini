@@ -12,6 +12,10 @@ public class Aluno extends Pessoa{
         return totalAtendPedag;
     }
 
+    public Float getNotaProcessoSeletivo() {
+        return notaProcessoSeletivo;
+    }
+
     public Aluno(String nome,
                  Long cpf,
                  LocalDate dataDeNascimento,
@@ -21,7 +25,7 @@ public class Aluno extends Pessoa{
 
         this.nome = nome;
         this.cpf = cpf;
-        //this.codigo = codigo;
+        this.codigo = cpf;
         this.telefone = telefone;
         this.dataDeNascimento = dataDeNascimento;
 
@@ -34,9 +38,11 @@ public class Aluno extends Pessoa{
         return totalAtendPedag;
     }
 
-    public void setTotalAtendPedag(Integer totalAtendPedag) {
+    private void setTotalAtendPedag(Integer totalAtendPedag) {
         this.totalAtendPedag = totalAtendPedag;
     }
+
+
 
     public SituacaoDaMatricula getSituacaoMatricula() {
         return situacaoMatricula;
@@ -45,4 +51,6 @@ public class Aluno extends Pessoa{
     public void setSituacaoMatricula(SituacaoDaMatricula situacaoMatricula) {
         this.situacaoMatricula = situacaoMatricula;
     }
+
+
 }

@@ -5,4 +5,5 @@ public enum FormacaoAcademica {
     GRADUACAO_COMPLETA,
     MESTRADO,
     DOUTORADO;
+
     }
