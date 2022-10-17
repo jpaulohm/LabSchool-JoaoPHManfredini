@@ -3,6 +3,8 @@
 
 Video de apresentação: https://drive.google.com/file/d/1KIWVNHMU0ngztgkiSCu5oGwfUdizASke/view
 
+Main está no arquivo "Menu.java"
+
 
 1 INTRODUÇÃO
 Considerando os assuntos estudados até o momento no módulo 1, vamos aplicar todos os conceitos estudados resolvendo o problema abordado no desenvolvimento do software solicitado pelo cliente Lab School.
