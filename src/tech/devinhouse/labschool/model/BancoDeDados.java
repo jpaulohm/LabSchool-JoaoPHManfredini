@@ -87,6 +87,7 @@ public class BancoDeDados {
                 return alunoList.get(i);
             }
         }
+        System.out.println("Aluno nao encontrado");
         return null;
     }
     public Pedagogo encontraPedagogo(Long cod){
@@ -115,5 +116,13 @@ public class BancoDeDados {
         SituacaoDaMatricula sit = Display.qualSituacaoDeMatricula();
         encontraAluno(cod).setSituacaoMatricula(sit);
         return;
+    }
+
+    public void relatorioProfessores(ExperienciaDesenvolvimento experiencia) {
+        for (int i = 0; i < professorList.size(); i++) {
+            if (professorList.get(i).getExperiencia() == experiencia){
+                System.out.println(professorList.get(i).getCodigo() + " - " + professorList.get(i).getNome()+ " - " +professorList.get(i).getFormacao()+ " - " +professorList.get(i).getExperiencia()+ " - " +professorList.get(i).getEstado());
+            }
+        }
     }
 }

@@ -24,7 +24,17 @@ public class Display {
         System.out.println("1 - Novo Aluno");
         System.out.println("2 - Novo Professor");
         System.out.println("3 - Novo Pedagogo");
-        System.out.println("4 - Voltar");
+        System.out.println("4 - Listagem de Pessoas");
+        System.out.println("5 - Alterar estado aluno");
+        System.out.println("6 - Voltar");
+        System.out.println();
+    }
+    static public void exibirTiposDePessoas() {
+        System.out.println();
+        System.out.println("1 - Aluno");
+        System.out.println("2 - Professor");
+        System.out.println("3 - Pedagogo");
+        System.out.println("Todos");
         System.out.println();
     }
 
@@ -95,13 +105,15 @@ public class Display {
     public static LocalDate obterDataNascimento() {
         Integer dia = 0, mes = 0, ano = 0;
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Dia de Nascimento: ");
-        dia = scanner.nextInt();
-        System.out.printf("Mes de Nascimento(numero): ");
-        mes = scanner.nextInt();
-        System.out.printf("Ano de Nascimento: ");
-        ano = scanner.nextInt();
-
+        while (dia<1||dia>31||mes<1||mes>12||ano>LocalDate.now().getYear()) {
+            System.out.println("Informe uma data valida");
+            System.out.printf("Dia: ");
+            dia = scanner.nextInt();
+            System.out.printf("Mes(numero): ");
+            mes = scanner.nextInt();
+            System.out.printf("Ano: ");
+            ano = scanner.nextInt();
+        }
         return LocalDate.of(ano,mes,dia);
     }
 
@@ -198,6 +210,24 @@ public class Display {
                 return SituacaoDaMatricula.ATENDIMENTO_PEDAGOGICO;
             case 4:
                 return SituacaoDaMatricula.INATIVO;
+        }
+        return null;
+    }
+
+    public static ExperienciaDesenvolvimento qualExperiencia() {
+        System.out.println("1 - Front-End\n" +
+                            "2 - Back-End\n" +
+                            "3 - Full-Stack\n");
+        Scanner scanner = new Scanner(System.in);
+        Integer i = scanner.nextInt();
+        switch (i){
+            case 1:
+                return ExperienciaDesenvolvimento.FRONT_END;
+            case 2:
+                return ExperienciaDesenvolvimento.BACK_END;
+            case 3:
+                return ExperienciaDesenvolvimento.FULL_STACK;
+
         }
         return null;
     }

@@ -15,7 +15,7 @@ public class Menu {
             switch (operacao){
                 case 1 :
                     Display.exibirMenuCadastros();
-                    operacao2 = Display.obterOperacao(4);
+                    operacao2 = Display.obterOperacao(6);
                     switch (operacao2){
                         case 1:
                             bancoDeDados.inserirAluno();
@@ -27,6 +27,26 @@ public class Menu {
                             bancoDeDados.inserirPedagogo();
                             break;
                         case 4:
+                            Display.exibirTiposDePessoas();
+                            operacao3=Display.obterOperacao(4);
+                            switch (operacao3){
+                                case 1:
+                                    bancoDeDados.listarAlunos();
+                                    break;
+                                case 2:
+                                    bancoDeDados.listarProfessores();
+                                    break;
+                                case 3:
+                                    bancoDeDados.listarPedagogos();
+                                    break;
+                                case 4:
+                                    bancoDeDados.listarAlunos();
+                                    bancoDeDados.listarProfessores();
+                                    bancoDeDados.listarPedagogos();
+                                    break;
+                            }
+                            break;
+                        case 5:
                             bancoDeDados.alterarEstadoMatriculaAluno();
                             break;
                     }
@@ -36,7 +56,10 @@ public class Menu {
                     operacao2 = Display.obterOperacao(3);
                     switch (operacao2){
                         case 1:
-                            bancoDeDados.relatorioAlunos(SituacaoDaMatricula.ATIVO);
+                            bancoDeDados.relatorioAlunos(Display.qualSituacaoDeMatricula());
+                            break;
+                        case 2:
+                            bancoDeDados.relatorioProfessores(Display.qualExperiencia());
                             break;
                     }
                     break;
